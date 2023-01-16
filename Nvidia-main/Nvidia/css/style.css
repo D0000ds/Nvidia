@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*********************BODY****************************/
+
+#container{
+    margin:auto;
+    width:80%;
+}
+/*********************HEADER****************************/
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+header nav {
+    display: flex;
+    align-items: flex-end;
+    width: 70%;
+}
+
+nav ul {
+    width: 80%;
+    display:flex;
+    justify-content: space-between;
+
+
+}
+
+nav ul li{
+    display: inline;
+    list-style-type: none;
+    
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+nav .icon{
+    display: none;
+}
+
+/*********************MAIN****************************/
+.art{
+    display: flex;
+    border: solid 2px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-color: yellowgreen ;
+}
+
+
+.logo_nv img{
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.ImgRTX{
+    position: relative;
+}
+
+.ImgRTX img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.transparent{
+    display: flex;
+    background-color: rgba(0, 128, 0, 0.607);
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 1%;
+}
+
+.transparent a{
+    color: white;
+    background-color: yellowgreen;
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    text-decoration: none;
+}
+
+.titre {
+    display: flex;
+}
+
+h1{
+ 
+   
+    font-size: 25px;
+}
+
+.side{
+    background-color: yellowgreen;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.black img{
+   
+    width: 40%;
+}
+
+.side article h2{
+    text-align: center;
+}
+
+.side figure p{
+    text-align: left;
+}
+.reseaux{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reseaux a i{
+    color: white;
+    font-size: 35px;
+}
+
+/*********************FOOTER****************************/
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.triangle{
+    display : inline-block;
+    position: relative;
+    border-top : 40px solid yellowgreen;
+    border-right : 23px solid transparent;
+    border-left : 22px solid transparent;
+    left: 15%;
+   }
+
+.galerie{
+    margin-top: 3%;
+}
+
+.galerie img{
+    object-fit: cover;
+    width: 100px;
+
+}
+
+#NvidiaImg{
+    cursor: pointer;
+    transition: 0.3s; 
+}
+
+#geforceimg{
+    cursor: pointer;
+    transition: 0.3s; 
+}
+
+#f2u{
+    cursor: pointer;
+    transition: 0.3s; 
+}
+#rtxlapimg{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+#rtxlap{
+    cursor: pointer;
+    transition: 0.3s; 
+}
+
+#NvidiaImg:hover{opacity: 0.7;}
+#geforceimg:hover{opacity: 0.7;}
+#f2u:hover{opacity: 0.7;}
+#rtxlap:hover{opacity: 0.7;}
+
+.modal{
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+#caption2{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+#caption3{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+#caption4{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+.modal-content, #caption2{
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.modal-content, #caption3{
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.modal-content, #caption4{
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;   
+}
+
+.close2{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;   
+}
+
+.close3{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;   
+}
+
+.close4{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;   
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close3:hover,
+.close3:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close4:hover,
+.close4:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#divPartenaires{
+    width: 20%;
+    margin-top: 3%;
+}
+
+.partenaires {
+    display: flex;
+    width: 100%;
+}
+
+.partenaires a{
+    width: 150px;
+}
+
+.newsletter{
+    height: 150px;
+    width: 20%;
+    margin-top: 3%;
+}
+
+.info{
+    background-color: white;
+    height: 30px;
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#inscription{
+    background-color: yellowgreen;
+    border: none;
+    color: white;
+    cursor: pointer;
+    height: 35px;
+    width: 100px;
+}
+
+/******************MEDIA*******************/
+
+@media  screen and (min-width: 319px)and (max-width:719px){
+    
+}
+
+@media screen and (min-width: 425px)and (max-width: 425px){
+   
+    
+}
